@@ -35,7 +35,7 @@ function y = post_process_square_wave(x, sr)
         
         % delete bursts that are impossibly short:
         bd = stop - start;
-        bd_thresh = 0.003 * sr;
+        bd_thresh = 0.005 * sr;
         start(bd < bd_thresh) = [];
         stop(bd < bd_thresh) = [];
         assert(length(start) == length(stop));
